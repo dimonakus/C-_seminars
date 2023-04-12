@@ -9,12 +9,11 @@ int number = new Random().Next(99, 1000); //99 + 1
 Console.WriteLine($"Случайное число из отрезка 99 - 1000 -> {number}");
 
 
-// int maxDigit (int num) // num = number
-// {
-//     int firstDigit = num / 100;
-// int secondDigit = num % 10;
-
-// int maxDigit = firstDigit > secondDigit ? firstDigit : firstDigit;
-// return maxDigit;
-// }
-
+int DeleteCenterDigit(int num) // num = number
+{
+    int first = num / 100;
+    int third = num % 10;
+    int answer = first * 10 + third;
+    return answer;
+}
+Console.WriteLine($"Двузначное число -> {DeleteCenterDigit(number)}");
