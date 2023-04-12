@@ -12,21 +12,15 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 
 int result = Remainder(number1, number2);
 
+//Вариант описания условия обычным способом  
 if (result == 0) Console.Write ($"{number1},{number2} -> кратно");
 else Console.Write ($"{number1},{number2} -> не кратно, остаток {result}");
+
+//Второй вариант описания тернарным условием
+//string res = result == 0 ? $"{number1},{number2} -> кратно" : $"{number1},{number2} -> не кратно, остаток {result}";
+//Console.Write(res);
 
 int Remainder(int num1, int num2)
 {
     return num1 % num2;
 }
-
-
-// int multipleNumber (int num1, num2) // num = number
-// {
-//     if (num1 % num2 == 0) Console.WriteLine($"first number {number1} is multiple of second number {number2}");
-//     else
-//     int ost = num1 % num2;
-//     return ost;
-// }
-// Console.WriteLine("");
-
