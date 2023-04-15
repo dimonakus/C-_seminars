@@ -22,7 +22,7 @@ Console.Write("Введите координаты Z второй точки Z2:
 int z2Coordinate = Convert.ToInt32(Console.ReadLine());
 
 
-double distance = Distance(x1Coordinate, y1Coordinate, x2Coordinate, y2Coordinate, z1Coordinate, x2Coordinate);
+double distance = Distance(x1Coordinate, y1Coordinate, z1Coordinate, x2Coordinate, y2Coordinate, z2Coordinate);
 double distanceRound = Math.Round(distance, 2, MidpointRounding.ToZero);
 Console.WriteLine($"Длина отрезка -> {distanceRound}");
 

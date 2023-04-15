@@ -82,30 +82,6 @@ if (ValidateNumber(number))
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // int count = 0;
 // // do
 // // {
