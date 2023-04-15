@@ -18,7 +18,7 @@ void Pow3 (int num)
 int count = 1;
 while (count<=num)
 {
-    Console.WriteLine($"{count, 3} {Math.Pow(count, 3), 4}");
+    Console.WriteLine($"{count, 3} | {Math.Pow(count, 3), 4}");
     count++;
 }
 }
