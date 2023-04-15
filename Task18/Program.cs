@@ -8,7 +8,7 @@ int numberQuarter = Convert.ToInt32(Console.ReadLine());
 
 string result = Coordinate(numberQuarter);
 
-Console.WriteLine(result == null ? "Неправильный номер четверти": result);
+Console.WriteLine(result == "ошибка" ? "Неправильный номер четверти": result);
 
 //string res = result >0 && result <0
 // string result = quarter > 0
@@ -21,5 +21,5 @@ string Coordinate (int num)
     if(num == 2) return "x < 0, y > 0";
     if(num == 3) return "x < 0, y < 0";
     if(num == 4) return "x > 0, y < 0";
-    return null;
+    return "ошибка";
 }
