@@ -4,8 +4,10 @@
 int[] array = new int[8];
 ArrayIn(array);
 ArrayPrint(array);
-Console.Write("- > [");
+Console.Write("\b\b");
+Console.Write(" -> [");
 ArrayPrint(array);
+Console.Write("\b\b");
 Console.Write("]");
 
 void ArrayIn(int[] array)
