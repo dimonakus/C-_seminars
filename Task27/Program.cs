@@ -4,8 +4,13 @@
 // 82 -> 10
 // 9012 -> 12
 
-Console.WriteLine("Введите целое положительное число: ");
+Console.WriteLine("Введите целое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+
+ if (number < 0) //Проверка, если число будет введено отрицательным
+ {
+     number = - number;
+ }
 
 int sumDigits = SumDigits(number);
 
@@ -13,12 +18,12 @@ Console.WriteLine($"Сумма цифр в числе: {number} -> {sumDigits}")
 
 int SumDigits(int num)
 {
-    int count = 0;
+    int res = 0;
     while (num > 0)
     {
-        count = count + num % 10 - 1;
+        res = res + num % 10 - 1;
         num = num / 10;
-        count++;
+        res++;
     }
-    return count;
+    return res;
 }

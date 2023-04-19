@@ -8,6 +8,11 @@ int numberA = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
+if (numberB < 0) //По условию задачи число B должно быть натуральным
+{
+    numberB = - numberB;
+}
+
 int powNumbers = PowN(numberA, numberB);
 Console.WriteLine($"{numberA}, {numberB} -> {powNumbers}");
 
