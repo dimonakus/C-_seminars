@@ -7,10 +7,7 @@
 Console.WriteLine("Введите целое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
- if (number < 0) //Проверка, если число будет введено отрицательным
- {
-     number = - number;
- }
+ if (number < 0) number = - number;  //Проверка, если число будет введено отрицательным
 
 int sumDigits = SumDigits(number);
 
@@ -20,6 +17,7 @@ int SumDigits(int num)
 {
     int res = 0;
     while (num > 0)
+    //while (num > 0 || num < 0)
     {
         res = res + num % 10 - 1;
         num = num / 10;
