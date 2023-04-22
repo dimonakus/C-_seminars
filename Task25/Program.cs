@@ -8,26 +8,29 @@ int numberA = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
-if (numberB < 0) //По условию задачи число B должно быть натуральным
+if (numberB < 0)
 {
-    numberB = - numberB;
+    //numberB = - numberB;
+
+    Console.Write("Вы ввели отрицательное второе число!!! Попробуйте еще раз!"); //По условию задачи число B должно быть натуральным сообщить, что неверно
 }
-
-int powNumbers = PowN(numberA, numberB);
-Console.WriteLine($"{numberA}, {numberB} -> {powNumbers}");
-
-int PowN(int numA, int numB)
+else
 {
-    int powN = 0;
-    int temp = numA;
-    for (int i = 1; i <= numB - 1; i++)
-    {
-        checked // Проверка на переполнение
-        {
+    int powNumbers = PowN(numberA, numberB);
+    Console.WriteLine($"{numberA}, {numberB} -> {powNumbers}");
 
-            powN = temp * numA;
-            temp = powN;
+    int PowN(int numA, int numB)
+    {
+        int powN = 0;
+        int temp = numA;
+        for (int i = 1; i < numB; i++) // -1 убрали и равно убрали
+        {
+            checked // Проверка на переполнение
+            {
+                powN = temp * numA;
+                temp = powN;
+            }
         }
+        return powN;
     }
-    return powN;
 }
