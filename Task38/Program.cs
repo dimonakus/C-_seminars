@@ -24,7 +24,30 @@ void PrintArray(double[] arr)
 
 double[] array = CreateArrayRndDouble(6, 0, 10);
 double minIElementRound = Math.Round(array.Min(), 1);
+//Вариант II (более правильный с точки зрения образовательного процесса)
+// double minIElementRound (double[] arr)
+// {
+//     double min = arr[0];
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         double round = Math.Round(arr[i], 1);
+//         if(round < min) min = round; 
+//     }
+//     return min;
+// }
 double maxIElementRound = Math.Round(array.Max(), 1);
+//Вариант II (более правильный с точки зрения образовательного процесса)
+// double maxIElementRound (double[] arr)
+// {
+//     double max = arr[0];
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         double round = Math.Round(arr[i], 1);
+//         if(round > max) max = round; 
+//     }
+//     return max;
+// }
+
 
 void SubtractionMaxMin(double min, double max)
 {
@@ -36,73 +59,3 @@ Console.Write("[");
 PrintArray(array);
 Console.Write("] -> ");
 SubtractionMaxMin(minIElementRound, maxIElementRound);
-
-
-
-
-//======================== Черновики
-// void MinIElement(double[] arr)
-// {
-//     //int b = 0;
-//     //double min = arr[b];
-//     //double roundMin = Math.Round(arr[b], 1);
-//     for (int i = 0; i < arr.Length-1; i++)
-//     {
-//         double min = arr[i];
-//         double roundMin = Math.Round(min, 1);
-
-//         for (int j = i + 1; j < arr.Length; j++)
-//         {
-//         if (arr[j] < min) min = arr[j];
-//         }
-
-//         //if (min>arr[i]) min = arr[i];
-//         //return roundMin;
-//          //Console.Write($"{min}, ");
-//     }
-       
-// }
-
-
-// void SelectionSort(int[] array)
-// {
-//     for (int i = 0; i < array.Length - 1; i++)
-//     {
-//         int minPosition = i;
-//         for (int j = i + 1; j < array.Length; j++)
-//         {
-//             if (array[j] < array[minPosition]) minPosition = j;
-//         }        
-
-
-//         int temporary = array[i];
-//         array[i] = array[minPosition];
-//         array[minPosition] = temporary;
-//     }
-// }
-
-// int maxDigit(int num) // num = number
-// {
-//     int firstDigit = num / 10;
-//     int secondDigit = num % 10;
-//     int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
-//     return maxDigit;
-// }
-
-
-// double MaxIDigit(double[] arr)
-// {
-//     int i = 0;
-//     double maxIDigit = arr[i];
-//     for (int i = 0; i < arr.Length; i++)
-//     {
-//         if (arr[i]>maxIDigit) maxIDigit = Math.Round(arr[i], 1);
-//     }
-//     return maxIDigit;
-// }
-
-// double SubtractionMaxMin(double min, double maxIDigit)
-// {
-//     double subtractionMaxMin = Math.Round((maxIDigit - minIDigit), 1);
-//     return subtractionMaxMin;
-// }
